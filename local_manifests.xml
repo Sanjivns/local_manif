@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-  <remote  name="pixel-devices"
-           fetch="https://github.com/PixelExperience-Devices"
-           revision="thirteen" />
+<remote <!--remote declaration-->
+   name="Royna"  <!--nickname of remote-->
+  fetch="github.com/roynatech2544" <!---url for git repo remote--->
+revision="lineage-20" <!-- default branch name to fetch, if not set probably defaults to 'master'-->
 
-   <remote name="pixel-devices-blobs"
-            fetch="https://gitlab.pixelexperience.org/android/vendor-blobs"
-            revision="thirteen" />
-   <!-- Trees -->
-    <project path="kernel/realme/sm7125" name="kernel_realme_sm7125" remote="pixel-devices" revision="thirteen" />  
-   <project path="device/realme/sm7125-common" name="device_realme_sm7125-common" remote="pixel-devices" revision="thirteen" />
-    <project path="vendor/realme/RMX2061" name="vendor_realme_RMX2061" remote="pixel-devices-blobs" revision="thirteen" />
-  <project path="vendor/realme/sm7125-common" name="vendor_realme_sm7125-common" remote="pixel-devices-blobs" revision="thirteen" />
-    <project path="device/realme/RMX2061" name="crdroidandroid/android_device_realme_RMX2061" revision="thirteen" />
-</manifest>
+<project <!-- declare project. Like dt, vt, kt. Single repos-->
+name="device_samsung_exynos7885" <!-- repo name-->
+path="device/samsung" <!-- destination path-->
+remote="royna" <!--remote name, should be one written above or in .repo/manfest/default.xml -->
+<!-- in this case remote 'royna', name='device_samsung_exynos7885' branch lineage-20. Would fetch github.com/roynatech2544/device_samsung_exynos7885/branch/lineage-20--> </project>
